@@ -5,7 +5,8 @@ var fourthColumn = ["istniejących warunków administracyjno-finansowych", "dals
 
 
 
-function makeQuote() {
-
+function makeQuote(sentencePart) {
+	return sentencePart[Math.floor(Math.random()*sentencePart.length)];
 };
 
+console.log(makeQuote(firstColumn) + " " + makeQuote(secondColumn) + " " + makeQuote(thirdColumn) + " " + makeQuote(fourthColumn) + ".");
