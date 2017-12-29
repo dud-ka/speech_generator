@@ -4,16 +4,22 @@ var thirdColumn = ["zmusza nas do przeanalizowania", "spełnia istotną rolę w 
 var fourthColumn = ["istniejących warunków administracyjno-finansowych", "dalszych kierunków rozwoju", "systemu powszechnego uczestnictwa", "postaw uczestników wobec zadań stawianych przez organizację", "nowych propozycji", "kierunków postępowego wychowania", "systemu szkolenia kadry odpowiadającego potrzebom", "odpowiednich warunków aktywizacji", "modelu rozwoju", "form oddziaływania"];
 var sentence = "";
 
-function makeQuote(sentencePart) {
+// 1 makeSentencePart - create part of sentence
+function makeSentencePart(sentencePart) { 
 	return sentencePart[Math.floor(Math.random()*sentencePart.length)];
 };
 
+//2 makeSentence - create sentence using parts of sentence
+//3 makeNSentences - create N sentences in for loop with "N" parameters
+// sentences will be string array and you sholuld check if sentence exist in array (if exist don't add it to aaray)
+// 4 makeSpeech - create speech by merge array elements
 
-for (var i=0; i<20; i++) {
-    sentence += makeQuote(firstColumn) + " " + makeQuote(secondColumn) + " " + makeQuote(thirdColumn) + " " + makeQuote(fourthColumn) + ". ";
-};
 
-console.log(sentence);
+// for (var i=0; i<20; i++) {
+//     sentence += makeSentencePart(firstColumn) + " " + makeSentencePart(secondColumn) + " " + makeSentencePart(thirdColumn) + " " + makeSentencePart(fourthColumn) + ". ";
+// };
+
+// console.log(sentence);
 
 
 
