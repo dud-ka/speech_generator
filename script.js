@@ -13,7 +13,7 @@ var fourthColumn = ["istniejących warunków administracyjno-finansowych", "dals
 "systemu powszechnego uczestnictwa", "postaw uczestników wobec zadań stawianych przez organizację", "nowych propozycji", 
 "kierunków postępowego wychowania", "systemu szkolenia kadry odpowiadającego potrzebom", "odpowiednich warunków aktywizacji", 
 "modelu rozwoju", "form oddziaływania"];
-var sentence = "";
+
 
 // 1 makeSentencePart - create part of sentence
 function makeSentencePart(sentencePart) { 
@@ -26,17 +26,22 @@ function makeSentence() {
 };
 
 
-
 //3 makeNSentences - create N sentences in for loop with "N" parameters
 // sentences will be string array and you sholuld check if sentence exist in array (if exist don't add it to aaray)
-// 4 makeSpeech - create speech by merge array elements
+
+function makeNSentences() {
+    var sentencesNumber = 5;
+    var start = 0;
+    var sentence = "";
+    while (start < sentencesNumber) {
+       sentence +=  makeSentence();
+       start++;
+   };
+   return sentence;
+};
 
 
-// for (var i=0; i<20; i++) {
-//     sentence += makeSentencePart(firstColumn) + " " + makeSentencePart(secondColumn) + " " + makeSentencePart(thirdColumn) + " " + makeSentencePart(fourthColumn) + ". ";
-// };
-
-// console.log(sentence);
+console.log(makeNSentences());
 
 
 
