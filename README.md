@@ -1,3 +1,3 @@
 # speech_generator
 
-https://github.com/dud-ka/speech_generator.git
+https://dud-ka.github.io/speech_generator/
