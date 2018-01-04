@@ -40,10 +40,12 @@ function makeNSentences(sentencesNumber) {
     return sentencesArray;
 };
 
+
 //4 mergeSentenceArray - merge all sentences and make one string
 function mergeSentencesArray() {
     return makeNSentences(3).join(" ");
 };
+
 
 console.log(mergeSentencesArray());
 
