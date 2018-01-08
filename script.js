@@ -14,8 +14,7 @@ var fourthColumn = ["istniejących warunków administracyjno-finansowych", "dals
 "kierunków postępowego wychowania", "systemu szkolenia kadry odpowiadającego potrzebom", "odpowiednich warunków aktywizacji", 
 "modelu rozwoju", "form oddziaływania"];
 
-
-// 1 makeSentencePart - create part of sentence
+// 1 makeSentencePart - create random part of sentence
 function makeSentencePart(sentencePart) { 
 	return sentencePart[Math.floor(Math.random()*sentencePart.length)];
 };
@@ -28,7 +27,6 @@ function makeSentence() {
 
 //3 makeNSentences - create N sentences in for loop with "N" parameters
 // sentences will be string array and you sholuld check if sentence exist in array (if exist don't add it to aaray)
-
 function makeNSentences(sentencesNumber) {
     var sentencesArray = [];
     while (sentencesArray.length < sentencesNumber) {
@@ -41,12 +39,23 @@ function makeNSentences(sentencesNumber) {
 };
 
 //4 mergeSentenceArray - merge all sentences and make one string
-function mergeSentencesArray() {
-    return makeNSentences(5).join(" ");
+function mergeSentencesArray(sentencesNumber) {
+    return makeNSentences(sentencesNumber).join(" ");
 };
 
 
-console.log(mergeSentencesArray());
+//NEW
+function sentencesNumber() {
+    return parseInt(document.getElementById("sentences-number").value);
+};
+
+ document.getElementById("generate-btn").addEventListener("click", function () {
+    var number = sentencesNumber();
+    var speech = mergeSentencesArray(number);
+    var paragraph = document.getElementById("speech");
+    return paragraph.innerHTML = speech;
+ });
+
 
 
 
