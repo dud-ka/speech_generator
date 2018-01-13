@@ -44,20 +44,28 @@ function mergeSentencesArray(sentencesNumber) {
 };
 
 
-//NEW
+//generate speech
 function sentencesNumber() {
     return parseInt(document.getElementById("sentences-number").value);
 };
 
- document.getElementById("generate-btn").addEventListener("click", function () {
+document.getElementById("generate-btn").addEventListener("click", function () {
     var number = sentencesNumber();
     var speech = mergeSentencesArray(number);
     var paragraph = document.getElementById("speech");
     return paragraph.innerHTML = speech;
- });
+});
 
 
+//copy speech
 
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
 
 
