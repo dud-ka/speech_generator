@@ -8,11 +8,6 @@
 <body>
     <div class="container">
         <h1>Wygeneruj swoje przemówienie!</h1>
-        <div class="text-area">
-            <p id="speech">
-              Wprowadź liczbę zdań jaką chcesz wygenerować, a następnie kliknij w przycisk "Generuj"
-            </p>  
-        </div> 
         <div class="buttons">
             <form>
                 Liczba zdań: <input type="text" size="5px" maxlength="4" id="sentences-number">
@@ -21,8 +16,14 @@
             <button id="copy-btn" onclick="copyToClipboard('#speech')">Kopiuj</button>
             <button id="reset-btn">Reset</button>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+        <div class="text-area">
+            <p id="speech">
+              Wprowadź liczbę zdań jaką chcesz wygenerować, a następnie kliknij w przycisk "Generuj"
+          </p>  
+      </div> 
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
