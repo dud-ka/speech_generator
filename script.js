@@ -67,5 +67,13 @@ function copyToClipboard(element) {
   $temp.remove();
 }
 
+//reset btn
+
+$("#reset-btn").click(function () {
+    var paragraph = document.getElementById("speech");
+    var reset = "Wprowadź liczbę zdań jaką chcesz wygenerować, a następnie kliknij w przycisk \"Generuj\"";
+    return paragraph.innerHTML = reset;
+});
+
 
 
