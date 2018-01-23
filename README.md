@@ -4,6 +4,6 @@
 https://dud-ka.github.io/speech_generator/
 
 #### In the __Speeech generator__ you can:
-* create a speech that with maximum 9999 sentences (enough for a 40-hour),
+* create a speech with maximum 9999 sentences (enough for a 40-hour),
 * copy the text to the clipboard,
 * reset the generated text.
