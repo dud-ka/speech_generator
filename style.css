@@ -1,6 +1,9 @@
-/** {
-    border: 1px solid black;
-}*/
+* {
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+
+}
+
 
 .container {
     width: 80%;
@@ -14,23 +17,44 @@
 }
 
 .text-area p {
-    max-height: 80%;
     padding: 20px;
     text-align: justify;
+    background-color: #fff; 
+    height: 60vh;
+    overflow: scroll;
+}
+.text-area {
+    border: 1px solid lightgray;
 }
 
 .buttons {
     margin: 0 auto;
     text-align: center;
     padding: 10px;
+    height: 10vh
+    border: none;
 }
 
+#generate-btn {
+    background-color: #777;
+}
+
+#copy-btn {
+    background-color: #5bc0de;
+}
+
+#reset-btn {
+    background-color: #d9534f;
+}
 
 button {
     width: 100px;
     height: 30px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    margin-top: 10px;
+    
+/*    font-size: 24px; */
+    margin-top: 5px;
     font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    border-radius: .25em;
 }
